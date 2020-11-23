@@ -54,16 +54,17 @@ public class Listener implements ActionListener {
                 new WindowsMethod("检查是否所有项都已填写!");
             }
             else if (CardNumber.getText().length()>0){
-                if (CardNumber.getText().length()!=15 || CardNumber.getText().length()!=18){
+                if (CardNumber.getText().length()!=15 && CardNumber.getText().length()!=18){
                     new WindowsMethod("身份证号只能是15或者18位!");
                 }
+                //生成图片
+                else {
+                    IDCard.imageBuilder(map);
+                    String fileName = "output/IDCardImage.png";
+                    OpenImage.open(fileName);
+                }
             }
-            //生成图片
-            else {
-                IDCard.imageBuilder(map);
-                String fileName = "output/IDCardImage.png";
-                OpenImage.open(fileName);
-            }
+
         }
     }
 
