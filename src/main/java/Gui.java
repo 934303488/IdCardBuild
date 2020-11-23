@@ -24,30 +24,20 @@ public class Gui {
         frame.setLocationRelativeTo(null);//设置窗体相对于另一组间的居中位置，参数null表示窗体相对于屏幕的中央位置
         frame.setResizable(false);//禁止调整窗体大小
         frame.setFont(new Font("宋体",Font.PLAIN,14));//设置字体，显示格式正常，大小
-
-        //实例化FlowLayout流式布局类的对象，指定对齐方式为居中对齐组件之间的间隔为10个像素
-//        FlowLayout fl = new FlowLayout(FlowLayout.CENTER,10,10);
-        //实例化流式布局类的对象
         frame.setLayout(null);
 
         /**
          * 姓名
          */
-
-        //实例化JLabel标签对象，该对象显示“车牌号”
         JLabel labName = new JLabel("姓名：");
         labName.setFont(new Font("宋体",Font.PLAIN,14));
         labName.setBounds(40,0,60,30);
-
-        //将labname标签添加到窗体上
         frame.add(labName);
 
-        //实例化JTextField标签对象化
         JTextField Name = new JTextField();
         Dimension dim = new Dimension(200,30);
         Name.setBounds(75,0,70,30);
         Name.setPreferredSize(dim);//设置除顶级容器组件以外其他组件的大小
-        //将text_VanNumber标签添加到窗体上
         frame.add(Name);
 
 
@@ -57,8 +47,6 @@ public class Gui {
         JLabel labGender = new JLabel("性别：");
         labGender.setFont(new Font("宋体",Font.PLAIN,14));
         labGender.setBounds(152,0,60,30);
-
-        //将labname标签添加到窗体上
         frame.add(labGender);
 
         JComboBox Gender=new JComboBox();    //创建JComboBox
@@ -66,11 +54,6 @@ public class Gui {
         Gender.setPreferredSize(dim);//设置除顶级容器组件以外其他组件的大小
         Gender.addItem("男");
         Gender.addItem("女");
-
-//        JTextField Gender = new JTextField();
-//        Gender.setBounds(187,0,30,30);
-//        Gender.setPreferredSize(dim);//设置除顶级容器组件以外其他组件的大小
-        //将text_VanNumber标签添加到窗体上
         frame.add(Gender);
 
         /**
@@ -80,9 +63,7 @@ public class Gui {
         labNational.setFont(new Font("宋体",Font.PLAIN,14));
         labNational.setBounds(260,0,60,30);
 
-        //将labname标签添加到窗体上
         frame.add(labNational);
-
         String[] listData = new String[]
                 {"汉","满","蒙古","回","藏","维吾尔","苗","彝","壮","布依","侗","瑶","白","土家","哈尼","哈萨克","傣","黎","傈僳",
                         "佤","畲","高山","拉祜","水","东乡","纳西","景颇","柯尔克孜","土","达斡尔","仫佬","羌","布朗","撒拉","毛南",
@@ -93,12 +74,6 @@ public class Gui {
         JComboBox<String> National = new JComboBox(listData);
         National.setBounds(295,0,80,30);
         National.setPreferredSize(dim);//设置除顶级容器组件以外其他组件的大小
-        //将text_VanNumber标签添加到窗体上
-
-//        JTextField National = new JTextField();
-//        National.setBounds(295,0,80,30);
-//        National.setPreferredSize(dim);//设置除顶级容器组件以外其他组件的大小
-        //将text_VanNumber标签添加到窗体上
         frame.add(National);
 
 
@@ -108,8 +83,6 @@ public class Gui {
         JLabel labAddress = new JLabel("住址：");
         labAddress.setFont(new Font("宋体",Font.PLAIN,14));
         labAddress.setBounds(40,40,60,30);
-
-        //将labname标签添加到窗体上
         frame.add(labAddress);
 
         JTextField Address = new JTextField();
@@ -121,19 +94,14 @@ public class Gui {
         /**
          * 身份证号码
          */
-        //实例化JLabel标签对象，该对象显示“车辆类型”
         JLabel labCardNumber = new JLabel("身份证号：");
         labCardNumber.setFont(new Font("宋体",Font.PLAIN,14));
         labCardNumber.setBounds(40,80,80,30);
-        //将labCarType添加到窗体上
         frame.add(labCardNumber);
 
-        //实例化JTextField
         JTextField CardNumber = new JTextField();
         CardNumber.setBounds(100,80,200,30);
-        //设置大小
         CardNumber.setPreferredSize(dim);
-        //添加到窗体
         frame.add(CardNumber);
 
         /**
@@ -142,15 +110,11 @@ public class Gui {
         JLabel labLIA = new JLabel("发证机关：");
         labLIA.setFont(new Font("宋体",Font.PLAIN,14));
         labLIA.setBounds(40,120,80,30);
-        //将labCarType添加到窗体上
         frame.add(labLIA);
 
-        //实例化JTextField
         JTextField LicenceIssuingAuthority = new JTextField();
         LicenceIssuingAuthority.setBounds(100,120,150,30);
-        //设置大小
         LicenceIssuingAuthority.setPreferredSize(dim);
-        //添加到窗体
         frame.add(LicenceIssuingAuthority);
 
         /**
@@ -159,15 +123,11 @@ public class Gui {
         JLabel labExpiryDate = new JLabel("有效期：");
         labExpiryDate.setFont(new Font("宋体",Font.PLAIN,14));
         labExpiryDate.setBounds(40,160,80,30);
-        //将labCarType添加到窗体上
         frame.add(labExpiryDate);
 
-        //实例化JTextField
         JTextField ExpiryDate = new JTextField();
         ExpiryDate.setBounds(90,160,200,30);
-        //设置大小
         ExpiryDate.setPreferredSize(dim);
-        //添加到窗体
         frame.add(ExpiryDate);
 
         /**
@@ -186,34 +146,6 @@ public class Gui {
         //设置按键大小
         button1.setSize(dim2);
         frame.add(button1);
-
-//        //实例化JButton组件
-//        JButton button2 = new JButton();
-//        //设置按键的显示内容
-//        button2.setBounds(190,130,100,30);
-//        button2.setText("打开图片");
-//        button2.setFont(new Font("宋体",Font.PLAIN,14));
-//        //设置按键大小
-//        button2.setSize(dim2);
-//        frame.add(button2);
-
-        //新增两个lable显示错误提示
-//        JLabel jLabelva = new JLabel();
-//        JLabel jLabelca = new JLabel();
-//        JLabel jLabelSuccess = new JLabel();
-//        jLabelva.setBounds(130, 45, 120, 30);//设置车牌号错误提示的位置
-//        jLabelca.setBounds(130, 95, 120, 30);//设置车辆类型错误提示的位置
-//        jLabelSuccess.setBounds(130,160,120,30);//设置生成成功的提示位置
-//        jLabelSuccess.setFont(new Font("宋体", Font.PLAIN, 14));  //宋体，正常风格，14号字体
-//        jLabelca.setFont(new Font("宋体", Font.PLAIN, 14));  //宋体，正常风格，14号字体
-//        jLabelva.setFont(new Font("宋体", Font.PLAIN, 14));  //宋体，正常风格，14号字体
-//        jLabelSuccess.setForeground(Color.red);//设置字体颜色为红色
-//        jLabelva.setForeground(Color.red);//设置字体颜色为红色
-//        jLabelca.setForeground(Color.red);//设置字体颜色为红色
-//        //将lable加载到frame上
-//        frame.add(jLabelva);
-//        frame.add(jLabelca);
-//        frame.add(jLabelSuccess);
 
 
         frame.setVisible(true);//窗体可见，一定要放在所有组件加入窗体后
